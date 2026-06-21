@@ -18,20 +18,20 @@
     "title": "MyThird",
     "date": "2026-06-21",
     "path": "2026/06/21/MyThird/post.md",
-    "excerpt": "测试文章。"
+    "excerpt": "嵌入式开发。"
   },
   {
     "slug": "myfourthrecord",
     "title": "MyFourthRecord",
     "date": "2026-06-21",
     "path": "2026/06/21/MyFourthRecord/post.md",
-    "excerpt": "新华社电。"
+    "excerpt": "WEBUI"
   },
   {
     "slug": "fifthrecord",
     "title": "FifthRecord",
     "date": "2026-06-21",
     "path": "2026/06/21/FifthRecord/post.md",
-    "excerpt": "伊朗谈判代表团拒绝与美方握手合影。"
+    "excerpt": "C#学习笔记。"
   }
 ]
