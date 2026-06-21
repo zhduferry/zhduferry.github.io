@@ -22,122 +22,20 @@
     <div class="nav-links">
       <a href="/">首页</a>
       <a href="/archives/">归档</a>
-<button id="dark-toggle" aria-label="切换暗黑模式">◐</button>
+      <button id="dark-toggle" aria-label="切换暗黑模式">◐</button>
     </div>
-      <input type="range" id="glass-slider" min="0.3" max="1" step="0.01" value="0.88" title="透明度">
+    <input type="range" id="glass-slider" min="0.3" max="1" step="0.01" value="0.88" title="透明度">
   </div>
 </nav>
 
 <main>
   <article>
     <header>
-      <h1>MyNewPost</h1>
-      <div class="meta">2025-03-07 &middot; zhdu</div>
+      <h1 id="post-title">MyNewPost</h1>
+      <div id="post-meta" class="meta">2025-03-07 &middot; zhdu</div>
     </header>
-    <div class="post-body">
-      <p>print("Runoob")<br>#标识符：变量名、函数名、类名、模块名等，不能以数字开头，不能包含空格、特殊符号、中文等，区分大小写。可以<br>'''<br>['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del',<br>'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda',<br>'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']<br>'''<br>#true<br>'''if True:<br>    print ("True")<br>else:<br>    print ("False")</p>
-      <p>if True:<br>    print ("Answer")<br>    print ("True")<br>else:<br>    print ("Answer")<br>print ("False")    # 缩进不一致，会导致运行错误'''</p>
-      <p>'''total &#x3D; item_one + <br>        item_two + <br>        item_three'''<br>total &#x3D; ['item_one', 'item_two', 'item_three','item_four', 'item_five']<br>#数据类型</p>
-      <h1 id="1-数字类型：int、float、complex-复数"><a href="#1-数字类型：int、float、complex-复数" class="headerlink" title="1. 数字类型：int、float、complex (复数)"></a>1. 数字类型：int、float、complex (复数)</h1><h1 id="2-字符串类型：str"><a href="#2-字符串类型：str" class="headerlink" title="2. 字符串类型：str"></a>2. 字符串类型：str</h1><p>'''<br>Python 中的字符串不能改变。<br>Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。<br>字符串切片 str[start:end]，其中 start（包含）是切片开始的索引，end（不包含）是切片结束的索引。<br>字符串的切片可以加上步长参数 step，语法格式如下：str[start:end:step]<br>'''<br>word &#x3D; '字符串'<br>sentence &#x3D; "这是一个句子。"<br>paragraph &#x3D; """这是一个段落，<br>可以由多行组成"""</p>
-      <p>str &#x3D; '1234567890'<br>print(str[0:5])  # 输出字符串的前 5 个字符<br>print(str[5:10])  # 输出字符串的第 6 个至第 10 个字符<br>print(str[0:10:2])  # 输出字符串的前 10 个字符，每两个字符取一个<br>print(str[::2])  # 输出字符串的每两个字符取一个<br>print(str[::-1])  # 输出字符串的反转<br>print(str*2)<br>print(str + "你好")<br>print("—————————–")<br>print('hello\nrunoob')      # 使用反斜杠()+n转义特殊字符<br>print(r'hello\nrunoob')     # 在字符串前面添加一个 r，表示原始字符串，不会发生转义</p>
-      <p>'''记住：空行也是程序代码的一部分。'''<br>#!/usr/bin/python3</p>
-      <p>input("\n\n按下 enter 键后退出。")<br>#以上代码中 ，\n\n 在结果输出前会输出两个新的空行。一旦用户按下 enter 键时，程序将退出。<br>#同一行显示多条语句 Python 可以在同一行中使用多条语句，语句之间使用分号 ; 分割，以下是一个简单的实例：<br>import sys; x &#x3D; 'runoob'; sys.stdout.write(x + '\n')</p>
-      <p>'''<br>多个语句构成代码组<br>缩进相同的一组语句构成一个代码块，我们称之代码组。<br>像if、while、def和class这样的复合语句，首行以关键字开始，以冒号( : )结束，该行之后的一行或多行代码构成代码组。<br>我们将首行及后面的代码组称为一个子句(clause)。<br>'''<br>'''if expression :<br>   suite<br>elif expression :<br>   suite<br>else :<br>   suite'''</p>
-      <p>#print默认输出是换行的，如果要实现不换行需要在变量末尾加上end&#x3D;""：<br>#!/usr/bin/python3</p>
-      <p>x&#x3D;"a"<br>y&#x3D;"b"</p>
-      <h1 id="换行输出"><a href="#换行输出" class="headerlink" title="换行输出"></a>换行输出</h1><p>print( x )<br>print( y )</p>
-      <p>print('———')</p>
-      <h1 id="不换行输出"><a href="#不换行输出" class="headerlink" title="不换行输出"></a>不换行输出</h1><p>print( x, end&#x3D;" " )<br>print( y, end&#x3D;" " )<br>print()</p>
-      <p>'''<br>import 与 from…import<br>在 python 用 import 或者 from…import 来导入相应的模块。</p>
-      <p>将整个模块(somemodule)导入，格式为： import somemodule</p>
-      <p>从某个模块中导入某个函数,格式为： from somemodule import somefunction</p>
-      <p>从某个模块中导入多个函数,格式为： from somemodule import firstfunc, secondfunc, thirdfunc</p>
-      <p>将某个模块中的全部函数导入，格式为： from somemodule import *<br>'''<br>import sys<br>print('&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;Python import mode&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;')<br>print ('命令行参数为:')<br>for i in sys.argv:<br>    print (i)<br>print ('\n python 路径为',sys.path)</p>
-      <h1 id="导入-sys-模块的-argv-path-成员"><a href="#导入-sys-模块的-argv-path-成员" class="headerlink" title="导入 sys 模块的 argv,path 成员"></a>导入 sys 模块的 argv,path 成员</h1><p>from sys import argv,path  #  导入特定的成员</p>
-      <p>print('&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;python from import&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;')<br>print('path:',path) # 因为已经导入path成员，所以此处引用时不需要加sys.path</p>
-      <h1 id="3-列表类型：list"><a href="#3-列表类型：list" class="headerlink" title="3. 列表类型：list"></a>3. 列表类型：list</h1><h1 id="4-元组类型：tuple"><a href="#4-元组类型：tuple" class="headerlink" title="4. 元组类型：tuple"></a>4. 元组类型：tuple</h1><h1 id="5-字典类型：dict"><a href="#5-字典类型：dict" class="headerlink" title="5. 字典类型：dict"></a>5. 字典类型：dict</h1><h1 id="6-集合类型：set、frozenset"><a href="#6-集合类型：set、frozenset" class="headerlink" title="6. 集合类型：set、frozenset"></a>6. 集合类型：set、frozenset</h1><h1 id="7-布尔类型：bool"><a href="#7-布尔类型：bool" class="headerlink" title="7. 布尔类型：bool"></a>7. 布尔类型：bool</h1><p>#bool 是 int 的子类，因此布尔值可以被看作整数来使用，其中 True 等价于 1。</p>
-      <h1 id="8-字节类型：bytes"><a href="#8-字节类型：bytes" class="headerlink" title="8. 字节类型：bytes"></a>8. 字节类型：bytes</h1><h1 id="9-字节数组类型：bytearray"><a href="#9-字节数组类型：bytearray" class="headerlink" title="9. 字节数组类型：bytearray"></a>9. 字节数组类型：bytearray</h1><h1 id="10-内存视图类型：memoryview"><a href="#10-内存视图类型：memoryview" class="headerlink" title="10. 内存视图类型：memoryview"></a>10. 内存视图类型：memoryview</h1><h1 id="11-None类型：NoneType"><a href="#11-None类型：NoneType" class="headerlink" title="11. None类型：NoneType"></a>11. None类型：NoneType</h1><p>'''<br>Python3 基本数据类型<br>Python 中的变量不需要声明。每个变量在使用前都必须赋值，变量赋值以后该变量才会被创建。<br>在 Python 中，变量就是变量，它没有类型，我们所说的"类型"是变量所指的内存中对象的类型。<br>等号（&#x3D;）用来给变量赋值。<br>等号（&#x3D;）运算符左边是一个变量名,等号（&#x3D;）运算符右边是存储在变量中的值<br>'''<br>a &#x3D; 10  # 整数<br>b &#x3D; 3.14  # 浮点数<br>c &#x3D; 1 + 5j  # 复数<br>d &#x3D; 'Hello, World!'  # 字符串<br>e &#x3D; True  # 布尔值<br>f &#x3D; None  # 空值</p>
-      <p>print(a,b,c,d)</p>
-      <p>#多变量赋值<br>a, b, c &#x3D; 1, 2, "john"<br>print(a, b, c)</p>
-      <p>#标准数据类型<br>'''<br>Number（数字）<br>String（字符串）<br>bool（布尔类型）<br>List（列表）<br>Tuple（元组）<br>Set（集合）<br>Dictionary（字典）<br>'''<br>'''<br>Python3 的六个标准数据类型中：<br>不可变数据（3 个）：Number（数字）、String（字符串）、Tuple（元组）；<br>可变数据（3 个）：List（列表）、Dictionary（字典）、Set（集合）。<br>'''<br>#此外还有一些高级的数据类型，如: 字节数组类型(bytes)。</p>
-      <p>'''</p>
-      <blockquote>
-      <blockquote>
-      <blockquote>
-      <p>5 + 4  # 加法<br>9</p>
-      <blockquote>
-      <blockquote>
-      <p>4.3 - 2 # 减法<br>2.3</p>
-      <blockquote>
-      <blockquote>
-      <p>3 * 7  # 乘法<br>21</p>
-      <blockquote>
-      <blockquote>
-      <p>2 &#x2F; 4  # 除法，得到一个浮点数<br>0.5</p>
-      <blockquote>
-      <blockquote>
-      <p>2 &#x2F;&#x2F; 4 # 除法，得到一个整数<br>0</p>
-      <blockquote>
-      <blockquote>
-      <p>17 % 3 # 取余<br>2</p>
-      <blockquote>
-      <blockquote>
-      <p>2 ** 5 # 乘方<br>32<br>'''<br>'''<br>注意: 在 Python 中，所有非零的数字和非空的字符串、列表、元组等数据类型都被视为 True，只有 0、空字符串、空列表、空元组等被视为 False。<br>因此，在进行布尔类型转换时，需要注意数据类型的真假性。<br>'''</p>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      <p>#列表<br>'''<br>1、列表写在方括号之间，元素用逗号隔开。<br>2、和字符串一样，列表可以被索引和切片。<br>3、列表可以使用 + 操作符进行拼接。<br>4、列表中的元素是可以改变的。<br>'''<br>#元组<br>#元组（tuple）与列表类似，不同之处在于元组的元素不能修改。元组写在小括号 () 里，元素之间用逗号隔开。</p>
-      <p>#元组中的元素类型也可以不相同<br>t &#x3D; (1, 'a', 3.14, True)<br>print(t)</p>
-      <p>'''<br>构造包含 0 个或 1 个元素的元组比较特殊，所以有一些额外的语法规则：<br>'''<br>tup1 &#x3D; ()    # 空元组<br>tup2 &#x3D; (20,) # 一个元素，需要在元素后添加逗号</p>
-      <p>''''<br>string、list 和 tuple 都属于 sequence（序列）。<br>sequence 是一种有序集合，可以用索引（index）访问其中的元素。<br>索引是从 0 开始的整数。<br>索引可以是正数、负数或切片（slice）。<br>索引可以是超出序列范围的，但超出范围的索引不会引发错误，而是返回一个特殊值——None。<br>1、与字符串一样，元组的元素不能修改。<br>2、元组也可以被索引和切片，方法一样。<br>3、注意构造包含 0 或 1 个元素的元组的特殊语法规则。<br>4、元组也可以使用 + 操作符进行拼接。<br>'''</p>
-      <p>#set(集合)<br>'''<br>Python 中的集合（Set）是一种无序、可变的数据类型，用于存储唯一的元素。<br>集合中的元素不会重复，并且可以进行交集、并集、差集等常见的集合操作。<br>在 Python 中，集合使用大括号 {} 表示，元素之间用逗号 , 分隔。<br>另外，也可以使用 set() 函数创建集合。<br>注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。<br>'''</p>
-      <p>bro &#x3D; {'Google', 'Taobao', 'Runoob', 'Facebook', 'Zhihu', 'Baidu'}<br>print(bro)   # 输出集合，重复的元素被自动去掉</p>
-      <h1 id="成员测试"><a href="#成员测试" class="headerlink" title="成员测试"></a>成员测试</h1><p>if 'Runoob' in bro :<br>    print('Runoob 在集合中')<br>else :<br>    print('Runoob 不在集合中')</p>
-      <h1 id="set可以进行集合运算"><a href="#set可以进行集合运算" class="headerlink" title="set可以进行集合运算"></a>set可以进行集合运算</h1><p>a &#x3D; set('abracadabra')<br>b &#x3D; set('alacazam')</p>
-      <p>print(a)  # 输出集合 a 每次输出都无序<br>print(b)  # 输出集合 b</p>
-      <p>#字典 字典（dictionary）是Python中另一个非常有用的内置数据类型。<br>'''<br>列表是有序的对象集合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。<br>字典是一种映射类型，字典用 { } 标识，它是一个无序的 键(key) : 值(value) 的集合。<br>'''<br>#键(key)必须使用不可变类型。</p>
-      <p>#在同一个字典中，键(key)必须是唯一的。</p>
-      <p>#!/usr/bin/python3</p>
-      <p>dict &#x3D; {}<br>dict['one'] &#x3D; "1 - 菜鸟教程"<br>dict[2]     &#x3D; "2 - 菜鸟工具"</p>
-      <p>tinydict &#x3D; {<br>    'name': 'runoob',<br>    'code':1,<br>    'site': '<a target="_blank" rel="noopener" href="http://www.runoob.com/">www.runoob.com</a>'<br>    }</p>
-      <p>print (dict['one'])       # 输出键为 'one' 的值<br>print (dict[2])           # 输出键为 2 的值<br>print (tinydict)          # 输出完整的字典<br>print (tinydict.keys())   # 输出所有键<br>print (tinydict.values()) # 输出所有值</p>
-      <p>'''</p>
-      <blockquote>
-      <blockquote>
-      <blockquote>
-      <p>dict([('Runoob', 1), ('Google', 2), ('Taobao', 3)])<br>{'Runoob': 1, 'Google': 2, 'Taobao': 3}</p>
-      <blockquote>
-      <blockquote>
-      <p>{x: x**2 for x in (2, 4, 6)}<br>{2: 4, 4: 16, 6: 36}</p>
-      <blockquote>
-      <blockquote>
-      <p>dict(Runoob&#x3D;1, Google&#x3D;2, Taobao&#x3D;3)<br>{'Runoob': 1, 'Google': 2, 'Taobao': 3}<br>'''<br>'''<br>1、字典是一种映射类型，它的元素是键值对。<br>2、字典的关键字必须为不可变类型，且不能重复。<br>3、创建空字典使用 { }。<br>4、通过键可以获取字典中对应的值。<br>5、通过键可以设置或修改字典中对应的值。<br>'''</p>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-      </blockquote>
-    </div>
-
-    <nav class="post-nav">
-      <span class="prev"><a href="/2025/03/07/MySecondPost/">&larr; MySecondPost</a></span>
-      <span class="next"></span>
-    </nav>
+    <div id="post-body" class="post-body">加载中…</div>
+    <nav class="post-nav" id="post-nav"></nav>
   </article>
 </main>
 
@@ -145,6 +43,38 @@
   <p>&copy; 2025 zhdu · 之渡的个人博客 · <a href="https://github.com/zhduferry">GitHub</a></p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="/js/script.js"></script>
+<script>
+const SLUG = 'mynewpost';
+(async () => {
+  try {
+    const res = await fetch('/posts/posts.json');
+    const posts = await res.json();
+    const meta = posts.find(p => p.slug === SLUG);
+    if (!meta) { document.getElementById('post-body').textContent = '文章未找到'; return; }
+
+    document.title = meta.title + ' - 这是一个博客';
+    document.getElementById('post-title').textContent = meta.title;
+    document.getElementById('post-meta').textContent = meta.date + ' · zhdu';
+    document.querySelector('link[rel="canonical"]').href = 'https://zhduferry.github.io/' + meta.path.replace('post.md', '');
+
+    const idx = posts.indexOf(meta);
+    const prev = idx < posts.length - 1 ? posts[idx + 1] : null;
+    const next = idx > 0 ? posts[idx - 1] : null;
+    const nav = document.getElementById('post-nav');
+    if (prev) nav.innerHTML += '<span class="prev"><a href="/' + prev.path.replace('post.md', '') + '">&larr; ' + prev.title + '</a></span>';
+    else nav.innerHTML += '<span class="prev"></span>';
+    if (next) nav.innerHTML += '<span class="next"><a href="/' + next.path.replace('post.md', '') + '">' + next.title + ' &rarr;</a></span>';
+    else nav.innerHTML += '<span class="next"></span>';
+
+    const md = await fetch('/' + meta.path);
+    const text = await md.text();
+    document.getElementById('post-body').innerHTML = marked.parse(text);
+  } catch(e) {
+    document.getElementById('post-body').textContent = '加载失败: ' + e.message;
+  }
+})();
+</script>
 </body>
 </html>

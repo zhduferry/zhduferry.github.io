@@ -22,32 +22,20 @@
     <div class="nav-links">
       <a href="/">首页</a>
       <a href="/archives/">归档</a>
-<button id="dark-toggle" aria-label="切换暗黑模式">◐</button>
+      <button id="dark-toggle" aria-label="切换暗黑模式">◐</button>
     </div>
-      <input type="range" id="glass-slider" min="0.3" max="1" step="0.01" value="0.88" title="透明度">
+    <input type="range" id="glass-slider" min="0.3" max="1" step="0.01" value="0.88" title="透明度">
   </div>
 </nav>
 
 <main>
   <section class="hero">
     <h1></h1>
-  </section>
-  <section class="hero">
-    <h1></h1>
+    <p></p>
   </section>
 
-  <section class="post-list">
-    <article class="post-card">
-      <h2><a href="/2025/03/07/MyNewPost/">MyNewPost</a></h2>
-      <div class="meta">2025-03-07</div>
-      <p class="excerpt">print("Runoob") #标识符：变量名、函数名、类名、模块名等，不能以数字开头，不能包含空格、特殊符号、中文等，区分大小写。可以 ['False', 'None', 'True', 'and', 'as', 'assert', …</p>
-    </article>
-
-    <article class="post-card">
-      <h2><a href="/2025/03/07/MySecondPost/">MySecondPost</a></h2>
-      <div class="meta">2025-03-07</div>
-      <p class="excerpt">（暂无内容）</p>
-    </article>
+  <section class="post-list" id="post-list">
+    <p style="text-align:center;color:var(--text-secondary)">加载中…</p>
   </section>
 </main>
 
@@ -56,5 +44,24 @@
 </footer>
 
 <script src="/js/script.js"></script>
+<script>
+(async () => {
+  try {
+    const res = await fetch('/posts/posts.json');
+    const posts = await res.json();
+    const list = document.getElementById('post-list');
+    if (!posts.length) { list.innerHTML = '<p style="text-align:center;color:var(--text-secondary)">暂无文章</p>'; return; }
+    list.innerHTML = posts.map(p =>
+      '<article class="post-card">' +
+        '<h2><a href="/' + p.path.replace('post.md', '') + '">' + p.title + '</a></h2>' +
+        '<div class="meta">' + p.date + '</div>' +
+        '<p class="excerpt">' + p.excerpt + '</p>' +
+      '</article>'
+    ).join('');
+  } catch(e) {
+    document.getElementById('post-list').innerHTML = '<p style="text-align:center;color:var(--text-secondary)">加载失败</p>';
+  }
+})();
+</script>
 </body>
 </html>

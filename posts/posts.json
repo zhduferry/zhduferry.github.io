@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "mysecondpost",
+    "title": "MySecondPost",
+    "date": "2025-03-07",
+    "path": "2025/03/07/MySecondPost/post.md",
+    "excerpt": "（暂无内容）"
+  },
+  {
+    "slug": "mynewpost",
+    "title": "MyNewPost",
+    "date": "2025-03-07",
+    "path": "2025/03/07/MyNewPost/post.md",
+    "excerpt": "print(\"Runoob\") Python基础语法教程笔记，涵盖标识符、数据类型、运算符等。"
+  }
+]

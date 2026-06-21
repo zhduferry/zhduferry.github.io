@@ -199,9 +199,11 @@ article .post-body code {
   border-radius: 3px; font-size: 0.9em; word-break: break-all;
 }
 article .post-body pre {
-  background: var(--code-bg); padding: 1rem; border-radius: 6px;
-  overflow-x: auto; margin-bottom: 1.25rem; line-height: 1.6; font-size: 0.9rem;
+  background: var(--code-bg); padding: 1rem 1.25rem; border-radius: 6px;
+  overflow-x: auto; margin-bottom: 1.25rem; line-height: 1.6; font-size: 0.875rem;
+  border: 1px solid var(--border);
 }
+article .post-body pre code { background: none; color: inherit; padding: 0; border: none; }
 article .post-body blockquote {
   border-left: 3px solid var(--accent); padding-left: 1rem; margin: 0 0 1.25rem;
   color: var(--text-secondary);
