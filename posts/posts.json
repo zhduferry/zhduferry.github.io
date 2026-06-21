@@ -4,34 +4,34 @@
     "title": "MyNewPost",
     "date": "2025-03-07",
     "path": "2025/03/07/MyNewPost/post.md",
-    "excerpt": "print(\"Runoob\") Python基础语法教程笔记，涵盖标识符、数据类型、运算符等。"
+    "excerpt": "                           "
   },
   {
     "slug": "mysecondpost",
     "title": "MySecondPost",
     "date": "2025-03-07",
     "path": "2025/03/07/MySecondPost/post.md",
-    "excerpt": "（暂无内容）"
+    "excerpt": "                             "
   },
   {
     "slug": "mythird",
     "title": "MyThird",
     "date": "2026-06-21",
     "path": "2026/06/21/MyThird/post.md",
-    "excerpt": "嵌入式开发。"
+    "excerpt": "                        "
   },
   {
     "slug": "myfourthrecord",
     "title": "MyFourthRecord",
     "date": "2026-06-21",
     "path": "2026/06/21/MyFourthRecord/post.md",
-    "excerpt": "WEBUI"
+    "excerpt": "                                "
   },
   {
     "slug": "fifthrecord",
     "title": "FifthRecord",
     "date": "2026-06-21",
     "path": "2026/06/21/FifthRecord/post.md",
-    "excerpt": "C#学习笔记。"
+    "excerpt": "                               "
   }
 ]
