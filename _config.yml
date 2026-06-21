@@ -1,0 +1,2 @@
+# GitHub Pages 配置：禁用 liquid 处理，避免 .md 文件中 {{ }} 语法报错
+liquid: false
