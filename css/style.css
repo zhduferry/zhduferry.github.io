@@ -43,8 +43,8 @@
   --hero-text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
-/* ── 背景图层（三层：遮罩 → 自定义图片 → 默认SVG） ── */
-body::before {
+/* ── 背景图层（挂在 html 上，覆盖包括滚动条的全部区域） ── */
+html::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -58,7 +58,7 @@ body::before {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-color: #e8ecf1;
 }
-[data-theme="dark"] body::before {
+[data-theme="dark"] html::before {
   background:
     linear-gradient(135deg, rgba(15,15,15,0.7) 0%, rgba(30,30,50,0.35) 50%, rgba(15,15,15,0.7) 100%),
     url('/images/bg.jpg'),
@@ -70,7 +70,7 @@ body::before {
 }
 
 /* ── 噪点纹理 ── */
-body::after {
+html::after {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -87,8 +87,28 @@ html {
   line-height: 1.75;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  background: transparent;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128,128,128,0.3) transparent;
 }
-body { min-height: 100vh; display: flex; flex-direction: column; position: relative; }
+body { min-height: 100vh; display: flex; flex-direction: column; position: relative; background: transparent; }
+
+/* ── 毛玻璃滚动条（融入背景） ── */
+::-webkit-scrollbar { width: 6px; background: transparent; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(128,128,128,0.3); border-radius: 3px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(128,128,128,0.5); }
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: rgba(200,200,200,0.18); border-color: rgba(255,255,255,0.06); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: rgba(200,200,200,0.3); }
+[data-theme="dark"] html { scrollbar-color: rgba(200,200,200,0.18) transparent; }
 a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
 a:hover { color: var(--accent-hover); }
 h1, h2, h3, h4 { font-weight: 600; line-height: 1.4; }
@@ -125,7 +145,7 @@ nav {
 /* ── 透明度滑动条（导航栏最右边） ── */
 #glass-slider {
   -webkit-appearance: none; appearance: none;
-  width: 60px; height: 4px;
+  width: 30px; height: 4px;
   border-radius: 2px;
   background: var(--border);
   cursor: pointer;
@@ -152,6 +172,7 @@ nav {
 
 /* ── 主体 ── */
 main { flex: 1; max-width: 720px; margin: 0 auto; padding: 3rem 1rem 4rem; width: 100%; }
+main > section, main > article, main > h2 { scroll-snap-align: start; }
 
 /* ── 首页 Hero ── */
 .hero {
@@ -242,7 +263,7 @@ footer a:hover { color: var(--accent); }
 
 /* ── 响应式 ── */
 @media (max-width: 640px) {
-  #glass-slider { width: 40px; }
+  #glass-slider { width: 24px; }
   .hero { padding: 2rem 1rem; }
   .hero h1 { font-size: 1.85rem; }
   article { padding: 1.25rem; border-radius: 8px; }
