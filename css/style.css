@@ -169,6 +169,9 @@ main { flex: 1; max-width: 720px; margin: 0 auto; padding: 3rem 1rem 4rem; width
 }
 .hero p { font-size: 1.15rem; color: var(--text-secondary); }
 
+/* Hero 内容为空时自动隐藏 */
+.hero:has(h1:empty):has(p:empty) { display: none; }
+
 /* ── 文章卡片（毛玻璃） ── */
 .post-list { display: flex; flex-direction: column; gap: 1rem; }
 .post-card {
