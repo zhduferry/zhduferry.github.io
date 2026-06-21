@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8eaf0;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#dfe3eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4dae6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8d6e5;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#dfe6ed;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#b8c9da;stop-opacity:0.35" />
+    </linearGradient>
+    <radialGradient id="g3" cx="75%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#f0f2f5;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#d0d7e0;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="g4" cx="20%" cy="70%" r="50%">
+      <stop offset="0%" style="stop-color:#e2e7ef;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#c5cdd8;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#g2)"/>
+  <rect width="1920" height="1080" fill="url(#g3)"/>
+  <rect width="1920" height="1080" fill="url(#g4)"/>
+  <!-- 柔和几何装饰 -->
+  <circle cx="1550" cy="220" r="280" fill="#d5dde8" opacity="0.3"/>
+  <circle cx="420" cy="800" r="200" fill="#dde3ec" opacity="0.25"/>
+  <circle cx="1600" cy="750" r="350" fill="#c8d2e0" opacity="0.2"/>
+</svg>
