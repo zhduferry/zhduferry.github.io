@@ -145,7 +145,7 @@ nav {
 /* ── 透明度滑动条（导航栏最右边） ── */
 #glass-slider {
   -webkit-appearance: none; appearance: none;
-  width: 30px; height: 4px;
+  width: 60px; height: 4px;
   border-radius: 2px;
   background: var(--border);
   cursor: pointer;
@@ -263,7 +263,7 @@ footer a:hover { color: var(--accent); }
 
 /* ── 响应式 ── */
 @media (max-width: 640px) {
-  #glass-slider { width: 24px; }
+  #glass-slider { width: 40px; }
   .hero { padding: 2rem 1rem; }
   .hero h1 { font-size: 1.85rem; }
   article { padding: 1.25rem; border-radius: 8px; }
