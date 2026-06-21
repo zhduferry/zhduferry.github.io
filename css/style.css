@@ -58,7 +58,6 @@ body::before {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-color: #e8ecf1;
 }
-
 [data-theme="dark"] body::before {
   background:
     linear-gradient(135deg, rgba(15,15,15,0.7) 0%, rgba(30,30,50,0.35) 50%, rgba(15,15,15,0.7) 100%),
@@ -107,9 +106,10 @@ nav {
 }
 .nav-inner {
   max-width: 720px; margin: 0 auto; padding: 0 1rem;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; gap: 1rem;
   height: 56px;
 }
+.nav-brand { margin-right: auto; }
 .nav-brand { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
 .nav-brand:hover { color: var(--accent-hover); }
 .nav-links { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
@@ -122,14 +122,15 @@ nav {
 }
 #dark-toggle:hover { color: var(--text); background: var(--border); }
 
-/* ── 透明度滑动条 ── */
+/* ── 透明度滑动条（导航栏最右边） ── */
 #glass-slider {
   -webkit-appearance: none; appearance: none;
-  width: 64px; height: 4px;
+  width: 60px; height: 4px;
   border-radius: 2px;
   background: var(--border);
   cursor: pointer;
   outline: none;
+  flex-shrink: 0;
 }
 #glass-slider::-webkit-slider-thumb {
   -webkit-appearance: none; appearance: none;
@@ -176,10 +177,7 @@ main { flex: 1; max-width: 720px; margin: 0 auto; padding: 3rem 1rem 4rem; width
   border: 1px solid var(--border);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
 }
-.post-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
+.post-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
 .post-card h2 { font-size: 1.25rem; margin: 0 0 0.35rem; font-weight: 600; }
 .post-card h2 a { color: var(--text); }
 .post-card h2 a:hover { color: var(--accent); }
@@ -246,7 +244,7 @@ footer a:hover { color: var(--accent); }
 
 /* ── 响应式 ── */
 @media (max-width: 640px) {
-  #glass-slider { width: 48px; }
+  #glass-slider { width: 40px; right: 0.5rem; }
   .hero { padding: 2rem 1rem; border-radius: 8px; }
   .hero h1 { font-size: 1.85rem; }
   article { padding: 1.25rem; border-radius: 8px; }
