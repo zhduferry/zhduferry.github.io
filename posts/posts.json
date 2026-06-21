@@ -1,12 +1,5 @@
 [
   {
-    "slug": "mysecondpost",
-    "title": "MySecondPost",
-    "date": "2025-03-07",
-    "path": "2025/03/07/MySecondPost/post.md",
-    "excerpt": "（暂无内容）"
-  },
-  {
     "slug": "mynewpost",
     "title": "MyNewPost",
     "date": "2025-03-07",
@@ -14,10 +7,31 @@
     "excerpt": "print(\"Runoob\") Python基础语法教程笔记，涵盖标识符、数据类型、运算符等。"
   },
   {
+    "slug": "mysecondpost",
+    "title": "MySecondPost",
+    "date": "2025-03-07",
+    "path": "2025/03/07/MySecondPost/post.md",
+    "excerpt": "（暂无内容）"
+  },
+  {
     "slug": "mythird",
     "title": "MyThird",
     "date": "2026-06-21",
     "path": "2026/06/21/MyThird/post.md",
     "excerpt": "测试文章。"
+  },
+  {
+    "slug": "myfourthrecord",
+    "title": "MyFourthRecord",
+    "date": "2026-06-21",
+    "path": "2026/06/21/MyFourthRecord/post.md",
+    "excerpt": "新华社电。"
+  },
+  {
+    "slug": "fifthrecord",
+    "title": "FifthRecord",
+    "date": "2026-06-21",
+    "path": "2026/06/21/FifthRecord/post.md",
+    "excerpt": "伊朗谈判代表团拒绝与美方握手合影。"
   }
 ]
